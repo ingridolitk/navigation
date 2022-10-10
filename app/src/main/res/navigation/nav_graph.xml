@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeApp">
+
+    <fragment
+        android:id="@+id/HomeApp"
+        android:name="com.ingrid.navigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_HomeApp_to_listEmail"
+            app:destination="@id/listEmail" />
+        <action
+            android:id="@+id/action_HomeApp_to_theEnd2"
+            app:destination="@id/theEnd" />
+        <action
+            android:id="@+id/action_HomeApp_to_listPhone2"
+            app:destination="@id/listPhone" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listPhone"
+        android:name="com.ingrid.navigation.HomeFragment"
+        tools:layout="@layout/list_phone" />
+
+    <fragment
+        android:id="@+id/listEmail"
+        android:name="com.ingrid.navigation.HomeFragment"
+        tools:layout="@layout/list_email" />
+
+
+    <fragment
+        android:id="@+id/theEnd"
+        android:name="com.ingrid.navigation.HomeFragment"
+        tools:layout="@layout/text_end" />
+
+</navigation>
